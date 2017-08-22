@@ -1,0 +1,15 @@
+server:
+    port: 8989
+    
+zuul:
+    routes:
+        foods:
+            path: /foods/**
+            url: http://localhost:9001/foods
+        wines:
+            path: /wines/**
+            url: http://localhost:9000/wines
+   
+ribbon:
+    eureka:
+        enabled: false
